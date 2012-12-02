@@ -4,6 +4,6 @@ guard 'shell' do
 end
 
 guard 'livereload' do
-  watch(/dist\**/)
+  watch(%r{dist/**})
 end
 
