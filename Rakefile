@@ -61,6 +61,8 @@ Dir.glob(DIR_SRC + "/**/*") do |src_entry|
     else
       file dist_entry => [src_entry, dist_dirname] do |t|
         copy(t.prerequisites[0], t.name);
+        # t.prerequisites[0] = src_entry
+        # t.name             = dist_entry
       end
     end
   end
